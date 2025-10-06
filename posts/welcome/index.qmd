@@ -1,0 +1,11 @@
+---
+title: "Erika´s Blog "
+author: "Erika Negrini"
+date: "2025-10-03"
+categories: [news]
+---
+
+ Welcome to my Blog!
+
+![](blog%20picture.jpg)
+
