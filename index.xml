@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Blog EN</title>
-<link>https://erikanegrini.github.io/MedBioInfo-Blog-/</link>
-<atom:link href="https://erikanegrini.github.io/MedBioInfo-Blog-/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://your-website-url.example.com/</link>
+<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Thu, 02 Oct 2025 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 03 Oct 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Erika´s Blog</title>
   <dc:creator>Erika Negrini</dc:creator>
-  <link>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/welcome/</link>
+  <link>https://your-website-url.example.com/posts/welcome/</link>
   <description><![CDATA[ 
 
 
@@ -22,14 +22,14 @@
 
 
 <p>Welcome to my Blog!</p>
-<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/welcome/blog picture.jpg" class="img-fluid"></p>
+<p><img src="https://your-website-url.example.com/posts/welcome/blog picture.jpg" class="img-fluid"></p>
 
 
 
  ]]></description>
   <category>news</category>
-  <guid>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/welcome/</guid>
-  <pubDate>Thu, 02 Oct 2025 22:00:00 GMT</pubDate>
+  <guid>https://your-website-url.example.com/posts/welcome/</guid>
+  <pubDate>Fri, 03 Oct 2025 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -1,1 +1,1 @@
-Sitemap: https://erikanegrini.github.io/MedBioInfo-Blog-/sitemap.xml
+Sitemap: https://your-website-url.example.com/sitemap.xml
