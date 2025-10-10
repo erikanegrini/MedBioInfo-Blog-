@@ -5,30 +5,205 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Blog EN</title>
-<link>https://your-website-url.example.com/</link>
-<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
+<title>Erika´s Blog</title>
+<link>https://erikanegrini.github.io/MedBioInfo-Blog-/</link>
+<atom:link href="https://erikanegrini.github.io/MedBioInfo-Blog-/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Fri, 03 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 10 Oct 2025 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Erika´s Blog</title>
+  <title>Day 5</title>
   <dc:creator>Erika Negrini</dc:creator>
-  <link>https://your-website-url.example.com/posts/welcome/</link>
+  <link>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day5/Day5.html</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p>Welcome to my Blog!</p>
-<p><img src="https://your-website-url.example.com/posts/welcome/blog picture.jpg" class="img-fluid"></p>
+<p>On our fifth and last day of course, we got introduced to ggplot2, a system for creating graphics. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details. Compared to base graphics (under R package for creating plots), it has a little extra function commands or arguments but in the end, it needs less coding when you want to make more nicer and articulated plots.</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day5/thumbnail.png" class="img-fluid"></p>
+<p>Why choosing ggplot2?</p>
+<p>-consistent code</p>
+<p>-flexible</p>
+<p>-automatic legends, colors</p>
+<p>-save plot objects</p>
+<p>-themes for reusing styles</p>
+<p>-numerous add-ons/extentions</p>
+<p>-nearly complete structured graphing solution</p>
+<p>-adapter to other programming languages</p>
+<p>The concept behing ggplot comes from grammar of graphics (gg) The input data can be tables, csv, xlsx The data is translated into plots and maps with different sizes, colors, shapes, points, lines… You can split plots into subplots, get statistical transformations in terms of counts, means, different coordinates layers (Cartesians, polars…), change visualization display to customize the display values and finally control the theme to change the font size, background…</p>
+<p>What do you need to create a plot? To plot any ggplot you just need two lines (The rest of the syntax is optional, you add them when you need them )</p>
+<p>-data (data.frame format)</p>
+<p>-geom_function (mapping –&gt; axis, and geom_points) Then some additional options can be statistics (position), coordinate, facet, theme, scale functions…</p>
+<p>The str function tells you the format of the data, to check it´s right before you start The data can be transformed into “long” or “wide” formats</p>
+<p>-In long formats, you have all numeric values in columns</p>
+<p>-In wide formats, you have data displayed longitudinally You can control what you have done so far with scales_ (scale_<aesthetic>_<type>) –&gt; position, color, size, shape, fill, linetype of the data points If you have continuous variables, you can control them with the scale_gradient It is also possible to control the range in the axis If you have many variables, you can control them with subplots Facets split the plot in subplots in one dimension, either horizontally or vertically Facet_grid will split the plot in more subplots in two dimensions, subplotting both horizontally and vertically You can control the legend of your plots under theme() You can also control texts like titles, subtitles and their colors (element_text) You can produce your own signature theme if you don´t like the default background, grids, ticks, borders (P + new theme) To save the plots, you need to create the object Ggplot package offers a convenite function for saving –&gt; Ggsave Or it can also be saved just like base plots under “print” The more resolution you give, the biggest the file</type></aesthetic></p>
+<p>More functions are:</p>
+<p>-Combining plots:</p>
+<p>p &lt;- (code of plot 1)</p>
+<p>q &lt;- (code of plot 2)</p>
+<p>Patchwork: :wrap_plots (p,q) + Plot_annotation (tag_levels = “a”)</p>
+<p>-Interactive plots</p>
+<p>Add an extention –&gt; ggiraph To convert my plots in interactive graphics</p>
+<p>There are many more extensions to conbining plots, customize theme, colors, sizes…</p>
+<p>Examples:</p>
+<p>Patchwork: combining plots</p>
+<p>Ggrepel: text labels including</p>
+<p>overlap control</p>
+<p>Ggforce: circles, splines, hulls, Voronoi…</p>
+<p>Ggmap: dedicated to mapping</p>
+<p>Ggraph: nextwork graphs</p>
+<p>One useful thing to do for pubblications…</p>
+<p>On R studio, you open a new script, you type command “sessioninfo()” –&gt; get info about R version</p>
+<p>After the introduction, we followed a tutorial to make some plots on Rstudio with the ggplot package</p>
+<p>-a scatterplot</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day5/day5_1.png" class="img-fluid"></p>
+<p>-a heatmap</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day5/day5_2.png" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <guid>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day5/Day5.html</guid>
+  <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 4</title>
+  <dc:creator>Erika Negrini</dc:creator>
+  <link>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day4/Day4.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>On our fourth day of course, we got introduced to nf-core, a global community effort to collect Nextflow pipelines developed around a variety of bioinformatic data. All nf-core pipelines are open source and the source code is available on github. However, nf-core does not only develop pipelines; the community also develops:</p>
+<p>-processes that they make available as modules (and optimizes them too).</p>
+<p>-training material for all user classes.</p>
+<p>-best practices for documentation.</p>
+<p>-templates for development.</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day4/day4_1.png" class="img-fluid"></p>
+<p>From the nf-core homepage, we can search for specific pipelines. During our practical session, we created a pixi environment containing nf-core and nextflow. Once that was done, we turned our attention to nf-core to run up a pipeline with the build in test data to test the setup, and to familiarize with the output of the pipeline.</p>
+<p>After testing that nextflow and nf-core are set up correctly, we used the pipeline on our RNAseq data.</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day4/thumbnails.png" class="img-fluid"></p>
+<p>While initializing, we made a new directory for this analysis. Then f-core helped us set up the pipelines with the nf-core launcher. Clicking on the launch version 3.19.0 button on the nf-core/rnaseq homepage, we followed the tutorial, we uploaded the input and output data, FASTA genome file and GTF annotation file. Once everything was filled in, clicking on Launch and we were redirected to another page containing our JSON file that has information on our run. We copied the JSON file and saved it as nf-params.json in our folder on HPC2N.</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day4/json.png" class="img-fluid"></p>
+<p>We then edited our configuration file with the correct project ID and personal email to receive a message with a summary of the run. The launcher gives the command to run the pipeline but we had to change this slightly, to add that we were running it via Pixi, and to add the server specific configuration file.</p>
+<p>After the launch, if everything is fine, the run will go on until is over with all samples (around 5h) It is possible to check the progress of our job with squeue -u your_username</p>
+
+
+
+ ]]></description>
+  <guid>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day4/Day4.html</guid>
+  <pubDate>Thu, 09 Oct 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 3</title>
+  <dc:creator>Erika Negrini</dc:creator>
+  <link>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day3/Day3.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>On our third day of course, we got introduced to Workflow Managers! Workflow managers provide a framework for the creation, execution, and monitoring of pipeline. They simplify pipeline development, optimize resource usage, handle software installation and versions, and run on different compute platforms, enabling workflow portability and sharing. With workflow managers you can develop an automated pipeline from your scripts that can then be run on a variety of systems. Once it is developed, execute a single command to start the pipeline. There are in principle two different flavors of workflow managers: snakemake, and nextflow. In this course we have been introduced to Nextflow! By design, the pipelines are:</p>
+<p>• portable</p>
+<p>• more time efficient (no more downtime between pipeline steps)</p>
+<p>• more resource efficient (mostly, but this might vary depending how skilled a developer you yourself are)</p>
+<p>• easier to install (especially when combined with containers, or environment managers)</p>
+<p>• more reproducible In nextflow, your scripts are turned into processes, connected by channels that contain the data - input, output etc. The order of the processes, and their interaction with each other, is specfied in the workflow scope.</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day3/day3_1.png" class="img-fluid"></p>
+<p>The executable part of the processes, the so called script, can be written in any language. The only thing that changes are the parameters that pertain to the environment and available resources. This makes the nextflow pipelines highly interoperable and portable. The pipelines can be integrated with version control tools, such as git or bitbucket, and containers technologies, such as apptainer or docker. This makes the pipeline very reproducible. The nextflow pipelines are extremely scalable, can be developed on a few samples and easily be run on hundreds or thousands of samples. When possible, processes are run in parallel automatically. Nexflow performs automatic checks on the processes and their in- and output. It can automatically resume execution at a point of failure without having to re-compute successfully completed parts.</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day3/day3_2.png" class="img-fluid"></p>
+<p>A Nextflow workflow is made by joining together different processes. Each process can be written in any scripting language that can be executed by the Linux platform. Processes are executed independently and are isolated from each other, i.e., they do not share a common (writable) state. The only way they can communicate is via asynchronous first-in, first-out (FIFO) queues, called channels. Any process can define one or more channels as an input and output. The interaction between these processes, and ultimately the workflow execution flow itself, is implicitly defined by these input and output declarations.</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day3/day3_3.png" class="img-fluid"></p>
+<p>We then executed our first Nextflow script (hello.nf)! First we set up the Pixi nextflow environment, then we declare a parameter “greeting” and initialize it with the value “Hello world!”. Then we initialize a channel labeled “greeting_ch”. This channel is the input for the processes in the workflow. Next we define the process named “SPLITLETTERS”. Within the process block we declare the input for the process. Then, we define the output of the process. The process sends the output as a channel. We then define the script portion of the process. Three double quotes start and end the code block to execute this process. Inside is the code to execute, splitting the string into chunks and saving each to a file. At the end, we define the workflow scope, where each process is called. The workflow scope starts with “workflow” and is enclosed in squiggly brackets. First, execute the process SPLITLETTERS and store the output in the channel. Then, execute the process CONVERTTOUPPER on the letters channel, which is flattened using the operator .flatten(). This transforms the input channel in such a way that every item is a separate element. We store the output in the channel results_ch.&nbsp;Finally, we print the final output to screen using the view operator. When our code is ready, we ask Pixi to run our Nextflow run. We can then modify it, resume and clean up!</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day3/day3_converttoupper.png" class="img-fluid"></p>
+<p>To demonstrate a real-world biomedical scenario, we implemented a proof of concept RNA-Seq workflow which:</p>
+<p>-Indexes a transcriptome file</p>
+<p>-Performs quality controls</p>
+<p>-Performs quantification</p>
+<p>-Creates a MultiQC report</p>
+<p>This was done by using a series of seven scripts, each of which built on the previous to create a complete workflow. These scripts made use of third-party tools:</p>
+<p>-Salmon, a tool for quantifying transcripts</p>
+<p>-FastQC, a tool to perform quality control for high throughput sequence data</p>
+<p>-MultiQC searches a given directory for analysis logs and compiles a HTML report.</p>
+<p>The pipeline we have built up required more computing power then the previous sessions, so we set slurm as the executor in a file called nextflow.config to execute nextflow. We defined our workflow parameters; created a transcriptome index file to add the processing step and a workflow scope; add Salmon in a container to the process; defined the run time environment; add a gene expression quantification; to check our samples, we add another process, FASTQC, and lastly we collected the outputs from the quantification and FASTQC processes to create a final report using MULTIQC. At each step, we asked pixi to run nextflow, adding and running one process at a time!</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day3/day3_script.png" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <guid>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day3/Day3.html</guid>
+  <pubDate>Wed, 08 Oct 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 2</title>
+  <dc:creator>Erika Negrini</dc:creator>
+  <link>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day2/Day2.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Today we started our second day of course with an introduction to “Pixi”, an environment manager. Bioinformatics environments specify the tools neded for the task at hand, and environment managers install these tools with all their dependencies. We installed Pixi, set up the environment in the course server, add and run Quarto.</p>
+<p>We then ran some quality control on sequencing data. When it comes to sequencing data, FastQC is a well known and often used software to check raw reads for their quality. Through a tutorial we got familiar with the command line, used the job scheduler slurm, made a Pixi environment, ran FastQC on some raw RNA sequencing files to practice and to understand the output and used MultiQC to summarize the FastQC output.</p>
+<p>After a break we got introduced to the “containers”. Containers are stand-alone pieces of software that require a container management tool to run. They are build and exchanged as container images that specify the contents of the container, such as the operating system, all dependencies, and software in an isolated environment. The container management tool then takes the images and build the container. These management tools can be run on all operating systems, and since the container has the operating system within it, it will run the same in all environments. Container images are easily portable and immutable, so they are stable over time. There are several programs that can be used to build and run containers. Docker, Appptainer, and Podman are the most commonly used platforms to date. Dockerhub and Seqera are two commonly used platforms for downloading container images. Once you have the container image on your local machine, you want to be able to use it. Apptainer can be used to build the container from the image. Then you can either enter the container and run as if you had the exact same operating system as the person who built it, or you can run the software inside the container from outside of the container. You can run Apptainer containers as part of a batch job by integrating them into a SLURM job submission script. We then ended the class by building our own container from scartch (from a definition file with the extension .def), a quite computationally intensive task, but the result was quite rewarding!</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day2/thumbnail.png" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <guid>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day2/Day2.html</guid>
+  <pubDate>Tue, 07 Oct 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Day 1</title>
+  <dc:creator>Erika Negrini</dc:creator>
+  <link>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day1/Day1.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>On the first day of the course we had an introduction to Data Management &amp; Reproducible Research. When working with any type of data, it makes sense to sit down before the project starts to think through the different life stages of the data in your project.</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day1/intro1.png" class="img-fluid"></p>
+<p>In the past, research data was often generated with one question in mind. Often, they would afterwards land in some drawer and be forgotten about. Nowadays researchers acknowledge that data can also be re-used, or combined with other data, to answer different questions. The FAIR principles promote efficient data discovery and reuse by providing guidelines to make digital resources. They rely on good data management practices in all phases of research: Research documentation, Data organisation, Information security, Ethics and legislation. In fact, the goal of the course is to give us tools that will help us plan and carry out your research. These tools will make our work more efficient and more reproducible.</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day1/thumbnail.png" class="img-fluid"></p>
+<p>After setting up GitHub and git in our server, we practiced the git merge function together to get more confident with this feature on VsCode and GitHub.</p>
+<p>After a break, we created our first Quarto Blog on vsCode</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day1/quarto.png" class="img-fluid"></p>
+<p>We created a Github repository and we pubblished it!</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day1/day1.png" class="img-fluid"></p>
+
+
+
+ ]]></description>
+  <guid>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day1/Day1.html</guid>
+  <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Intro to the course</title>
+  <dc:creator>Erika Negrini</dc:creator>
+  <link>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Here you can find lots of info related to the course, published day by day! The daily blog will walk you step by step through Data management, reproducibility, pubblication, pipelines, quality controlthe and much more</p>
+<p><img src="https://erikanegrini.github.io/MedBioInfo-Blog-/posts/welcome/appliedbioinfo.png" class="img-fluid"></p>
 
 
 
  ]]></description>
   <category>news</category>
-  <guid>https://your-website-url.example.com/posts/welcome/</guid>
+  <guid>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/welcome/</guid>
   <pubDate>Fri, 03 Oct 2025 00:00:00 GMT</pubDate>
 </item>
 </channel>

@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
-<meta name="dcterms.date" content="2025-10-06">
+<meta name="author" content="Erika Negrini">
+<meta name="dcterms.date" content="2025-10-10">
 
-<title>Post With Code – Blog EN</title>
+<title>Day 5 – Erika´s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1db3f541d99483cdc7a0d9cf38862b2c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Blog EN</span>
+    <span class="navbar-title">Erika´s Blog</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -96,15 +96,15 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/erikanegrini"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://ki.se/en/people/erika-negrini"> <i class="bi bi-KI website" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -119,11 +119,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post With Code</h1>
+      <h1 class="title">Day 5</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-                <div class="quarto-category">code</div>
-                <div class="quarto-category">analysis</div>
+                <div class="quarto-category">true</div>
               </div>
                   </div>
   </div>
@@ -134,14 +132,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Harlow Malloc </p>
+               <p>Erika Negrini </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 6, 2025</p>
+        <p class="date">October 10, 2025</p>
       </div>
     </div>
     
@@ -160,7 +158,46 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is a post with executable code.</p>
+<p>On our fifth and last day of course, we got introduced to ggplot2, a system for creating graphics. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details. Compared to base graphics (under R package for creating plots), it has a little extra function commands or arguments but in the end, it needs less coding when you want to make more nicer and articulated plots.</p>
+<p><img src="thumbnail.png" class="img-fluid"></p>
+<p>Why choosing ggplot2?</p>
+<p>-consistent code</p>
+<p>-flexible</p>
+<p>-automatic legends, colors</p>
+<p>-save plot objects</p>
+<p>-themes for reusing styles</p>
+<p>-numerous add-ons/extentions</p>
+<p>-nearly complete structured graphing solution</p>
+<p>-adapter to other programming languages</p>
+<p>The concept behing ggplot comes from grammar of graphics (gg) The input data can be tables, csv, xlsx The data is translated into plots and maps with different sizes, colors, shapes, points, lines… You can split plots into subplots, get statistical transformations in terms of counts, means, different coordinates layers (Cartesians, polars…), change visualization display to customize the display values and finally control the theme to change the font size, background…</p>
+<p>What do you need to create a plot? To plot any ggplot you just need two lines (The rest of the syntax is optional, you add them when you need them )</p>
+<p>-data (data.frame format)</p>
+<p>-geom_function (mapping –&gt; axis, and geom_points) Then some additional options can be statistics (position), coordinate, facet, theme, scale functions…</p>
+<p>The str function tells you the format of the data, to check it´s right before you start The data can be transformed into “long” or “wide” formats</p>
+<p>-In long formats, you have all numeric values in columns</p>
+<p>-In wide formats, you have data displayed longitudinally You can control what you have done so far with scales_ (scale_<aesthetic>_<type>) –&gt; position, color, size, shape, fill, linetype of the data points If you have continuous variables, you can control them with the scale_gradient It is also possible to control the range in the axis If you have many variables, you can control them with subplots Facets split the plot in subplots in one dimension, either horizontally or vertically Facet_grid will split the plot in more subplots in two dimensions, subplotting both horizontally and vertically You can control the legend of your plots under theme() You can also control texts like titles, subtitles and their colors (element_text) You can produce your own signature theme if you don´t like the default background, grids, ticks, borders (P + new theme) To save the plots, you need to create the object Ggplot package offers a convenite function for saving –&gt; Ggsave Or it can also be saved just like base plots under “print” The more resolution you give, the biggest the file</type></aesthetic></p>
+<p>More functions are:</p>
+<p>-Combining plots:</p>
+<p>p &lt;- (code of plot 1)</p>
+<p>q &lt;- (code of plot 2)</p>
+<p>Patchwork: :wrap_plots (p,q) + Plot_annotation (tag_levels = “a”)</p>
+<p>-Interactive plots</p>
+<p>Add an extention –&gt; ggiraph To convert my plots in interactive graphics</p>
+<p>There are many more extensions to conbining plots, customize theme, colors, sizes…</p>
+<p>Examples:</p>
+<p>Patchwork: combining plots</p>
+<p>Ggrepel: text labels including</p>
+<p>overlap control</p>
+<p>Ggforce: circles, splines, hulls, Voronoi…</p>
+<p>Ggmap: dedicated to mapping</p>
+<p>Ggraph: nextwork graphs</p>
+<p>One useful thing to do for pubblications…</p>
+<p>On R studio, you open a new script, you type command “sessioninfo()” –&gt; get info about R version</p>
+<p>After the introduction, we followed a tutorial to make some plots on Rstudio with the ggplot package</p>
+<p>-a scatterplot</p>
+<p><img src="day5_1.png" class="img-fluid"></p>
+<p>-a heatmap</p>
+<p><img src="day5_2.png" class="img-fluid"></p>
 
 
 
@@ -238,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/your-website-url\.example\.com");
+        var filterRegex = new RegExp("https:\/\/erikanegrini\.github\.io\/MedBioInfo-Blog-\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
