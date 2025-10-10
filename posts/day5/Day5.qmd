@@ -1,0 +1,114 @@
+---
+title: "Day 5"
+author: "Erika Negrini"
+date: 2025-10-10
+format: html
+---
+
+On our fifth and last day of course, we got introduced to ggplot2, a system for creating graphics. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details. Compared to base graphics (under R package for creating plots), it has a little extra function commands or arguments but in the end, it needs less coding when you want to make more nicer and articulated plots.
+
+![](thumbnail.png)
+
+Why choosing ggplot2?
+
+-consistent code
+
+-flexible
+
+-automatic legends, colors
+
+-save plot objects
+
+-themes for reusing styles
+
+-numerous add-ons/extentions
+
+-nearly complete structured graphing solution
+
+-adapter to other programming languages
+
+The concept behing ggplot comes from grammar of graphics (gg)
+The input data can be tables, csv, xlsx
+The data is translated into plots and maps with different sizes, colors, shapes, points, lines…
+You can split plots into subplots, get statistical transformations in terms of counts, means, different coordinates layers (Cartesians, polars…), change visualization display to customize the display values and finally control the theme to change the font size, background…
+
+What do you need to create a plot?
+To plot any ggplot you just need two lines (The rest of the syntax is optional, you add them when you need them )
+
+-data (data.frame format)
+
+-geom_function (mapping --> axis, and geom_points)
+Then some additional options can be statistics (position), coordinate, facet, theme, scale functions…
+
+The str function tells you the format of the data, to check it´s right before you start 
+The data can be transformed into “long” or “wide” formats
+
+-In long formats, you have all numeric values in columns
+
+-In wide formats, you have data displayed longitudinally
+You can control what you have done so far with scales_ (scale_<aesthetic>_<type>)
+--> position, color, size, shape, fill, linetype of the data points
+If you have continuous variables, you can control them with the scale_gradient
+It is also possible to control the range in the axis
+If you have many variables, you can control them with subplots
+Facets split the plot in subplots in one dimension, either horizontally or vertically
+Facet_grid will split the plot in more subplots in two dimensions, subplotting both horizontally and vertically
+You can control the legend of your plots under theme()
+You can also control texts like titles, subtitles and their colors (element_text)
+You can produce your own signature theme if you don´t like the default background, grids, ticks, borders (P + new theme) 
+To save the plots, you need to create the object 
+Ggplot package offers a convenite function for saving --> Ggsave
+Or it can also be saved just like base plots under “print”
+The more resolution you give, the biggest the file 
+
+More functions are:
+
+-Combining plots:
+
+p <- (code of plot 1)
+
+q <- (code of plot 2)
+
+Patchwork: :wrap_plots (p,q) +
+Plot_annotation (tag_levels = “a”)
+
+-Interactive plots
+
+Add an extention --> ggiraph
+To convert my plots in interactive graphics 
+
+There are many more extensions to conbining plots, customize theme, colors, sizes…
+
+Examples:
+
+Patchwork: combining plots
+
+Ggrepel: text labels including
+
+overlap control
+
+Ggforce: circles, splines, hulls, Voronoi…
+
+Ggmap: dedicated to mapping
+
+Ggraph: nextwork graphs
+
+One useful thing to do for pubblications...
+
+On R studio, you open a new script, you type command “sessioninfo()” --> get info about R version 
+
+After the introduction, we followed a tutorial to make some plots on Rstudio with the ggplot package
+
+-a scatterplot 
+
+![](day5_1.png)
+
+-a heatmap
+
+![](day5_2.png)
+
+
+
+
+
+

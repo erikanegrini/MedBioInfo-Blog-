@@ -1,11 +1,12 @@
 ---
-title: "Erika´s Blog "
+title: "Intro to the course"
 author: "Erika Negrini"
 date: "2025-10-03"
 categories: [news]
 ---
 
- Welcome to my Blog!
+ Here you can find lots of info related to the course, published day by day!
+ The daily blog will walk you step by step through Data management, reproducibility, pubblication, pipelines, quality controlthe and much more 
 
-![](blog%20picture.jpg)
+![](appliedbioinfo.png)
 

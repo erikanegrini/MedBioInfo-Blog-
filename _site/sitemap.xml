@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-website-url.example.com/about.html</loc>
-    <lastmod>2025-10-06T11:56:13.650Z</lastmod>
+    <loc>https://erikanegrini.github.io/MedBioInfo-Blog-/about.html</loc>
+    <lastmod>2025-10-09T15:37:32.200Z</lastmod>
   </url>
   <url>
-    <loc>https://your-website-url.example.com/posts/welcome/index.html</loc>
-    <lastmod>2025-10-06T12:07:12.698Z</lastmod>
+    <loc>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day1/Day1.html</loc>
+    <lastmod>2025-10-10T12:31:54.000Z</lastmod>
   </url>
   <url>
-    <loc>https://your-website-url.example.com/posts/post-with-code/index.html</loc>
-    <lastmod>2025-10-06T11:12:35.597Z</lastmod>
+    <loc>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day5/Day5.html</loc>
+    <lastmod>2025-10-10T12:37:12.276Z</lastmod>
   </url>
   <url>
-    <loc>https://your-website-url.example.com/index.html</loc>
-    <lastmod>2025-10-06T11:45:05.963Z</lastmod>
+    <loc>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day3/Day3.html</loc>
+    <lastmod>2025-10-10T12:34:58.526Z</lastmod>
+  </url>
+  <url>
+    <loc>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day4/Day4.html</loc>
+    <lastmod>2025-10-10T12:35:23.143Z</lastmod>
+  </url>
+  <url>
+    <loc>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/day2/Day2.html</loc>
+    <lastmod>2025-10-09T15:11:26.409Z</lastmod>
+  </url>
+  <url>
+    <loc>https://erikanegrini.github.io/MedBioInfo-Blog-/posts/welcome/index.html</loc>
+    <lastmod>2025-10-10T12:37:33.933Z</lastmod>
+  </url>
+  <url>
+    <loc>https://erikanegrini.github.io/MedBioInfo-Blog-/index.html</loc>
+    <lastmod>2025-10-09T15:33:22.000Z</lastmod>
   </url>
 </urlset>

@@ -10,5 +10,38 @@
   },
   "about.qmd": {
     "about.html": "c5283b44"
+  },
+  "posts/2025-10-06-day1.qmd": {
+    "2025-10-06-day1.html": "485fc2e9"
+  },
+  "posts/2025-10-06-my-day.qmd": {
+    "2025-10-06-my-day.html": "52ab505a"
+  },
+  "posts/day2/2025-10-06-my-day.qmd": {
+    "2025-10-06-my-day.html": "5cc5f6fa"
+  },
+  "posts/day1/2025-10-06-day1.qmd": {
+    "2025-10-06-day1.html": "ef3f7c9d"
+  },
+  "posts/day3/2025-10-06-my-day.qmd": {
+    "2025-10-06-my-day.html": "19d70422"
+  },
+  "posts/day4/2025-10-06-my-day.qmd": {
+    "2025-10-06-my-day.html": "8df96ec6"
+  },
+  "posts/day2/Day2.qmd": {
+    "Day2.html": "536f5eef"
+  },
+  "posts/day4/Day4.qmd": {
+    "Day4.html": "bc16d06c"
+  },
+  "posts/day3/Day3.qmd": {
+    "Day3.html": "e84d62c4"
+  },
+  "posts/day1/Day1.qmd": {
+    "Day1.html": "fb786966"
+  },
+  "posts/day5/Day5.qmd": {
+    "Day5.html": "87debaf0"
   }
 }

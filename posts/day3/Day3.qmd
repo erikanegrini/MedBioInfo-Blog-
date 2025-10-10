@@ -1,0 +1,67 @@
+---
+title: "Day 3"
+author: "Erika Negrini"
+date: 2025-10-08
+format: html
+---
+
+On our third day of course, we got introduced to Workflow Managers!
+Workflow managers provide a framework for the creation, execution, and monitoring of pipeline. They simplify pipeline development, optimize resource usage, handle software installation and versions, and run on different compute platforms, enabling workflow portability and sharing.
+With workflow managers you can develop an automated pipeline from your scripts that can then be run on a variety of systems. Once it is developed, execute a single command to start the pipeline.
+There are in principle two different flavors of workflow managers: snakemake, and nextflow. In this course we have been introduced to Nextflow!
+By design, the pipelines are:
+
+•	portable
+
+•	more time efficient (no more downtime between pipeline steps)
+
+•	more resource efficient (mostly, but this might vary depending how skilled a developer you yourself are)
+
+•	easier to install (especially when combined with containers, or environment managers)
+
+•	more reproducible
+In nextflow, your scripts are turned into processes, connected by channels that contain the data - input, output etc. The order of the processes, and their interaction with each other, is specfied in the workflow scope.
+
+![](day3_1.png)
+
+The executable part of the processes, the so called script, can be written in any language. The only thing that changes are the parameters that pertain to the environment and available resources. This makes the nextflow pipelines highly interoperable and portable. The pipelines can be integrated with version control tools, such as git or bitbucket, and containers technologies, such as apptainer or docker. This makes the pipeline very reproducible.
+The nextflow pipelines are extremely scalable, can be developed on a few samples and easily be run on hundreds or thousands of samples. When possible, processes are run in parallel automatically.
+Nexflow performs automatic checks on the processes and their in- and output. It can automatically resume execution at a point of failure without having to re-compute successfully completed parts.
+
+![](day3_2.png)
+
+A Nextflow workflow is made by joining together different processes. Each process can be written in any scripting language that can be executed by the Linux platform. Processes are executed independently and are isolated from each other, i.e., they do not share a common (writable) state. The only way they can communicate is via asynchronous first-in, first-out (FIFO) queues, called channels. Any process can define one or more channels as an input and output. The interaction between these processes, and ultimately the workflow execution flow itself, is implicitly defined by these input and output declarations.
+
+![](day3_3.png)
+
+We then executed our first Nextflow script (hello.nf)!
+First we set up the Pixi nextflow environment, then we declare a parameter “greeting” and initialize it with the value “Hello world!”. Then we initialize a channel labeled “greeting_ch”. This channel is the input for the processes in the workflow. Next we define the process named “SPLITLETTERS”. 
+Within the process block we declare the input for the process. Then, we define the output of the process. The process sends the output as a channel.
+We then define the script portion of the process. Three double quotes start and end the code block to execute this process. Inside is the code to execute, splitting the string into chunks and saving each to a file. At the end, we define the workflow scope, where each process is called. The workflow scope starts with “workflow” and is enclosed in squiggly brackets. First, execute the process SPLITLETTERS and store the output in the channel.
+Then, execute the process CONVERTTOUPPER on the letters channel, which is flattened using the operator .flatten(). This transforms the input channel in such a way that every item is a separate element. We store the output in the channel results_ch. Finally, we print the final output to screen using the view operator. When our code is ready, we ask Pixi to run our Nextflow run. We can then modify it, resume and clean up!
+
+![](day3_converttoupper.png)
+
+To demonstrate a real-world biomedical scenario, we implemented a proof of concept RNA-Seq workflow which:
+
+-Indexes a transcriptome file
+
+-Performs quality controls
+
+-Performs quantification
+
+-Creates a MultiQC report
+
+This was done by using a series of seven scripts, each of which built on the previous to create a complete workflow. These scripts made use of third-party tools:
+
+-Salmon, a tool for quantifying transcripts 
+
+-FastQC, a tool to perform quality control for high throughput sequence data
+
+-MultiQC searches a given directory for analysis logs and compiles a HTML report. 
+
+The pipeline we have built up required more computing power then the previous sessions, so we set slurm as the executor in a file called nextflow.config to execute nextflow. 
+We defined our workflow parameters; created a transcriptome index file to add the processing step and a workflow scope; add Salmon in a container to the process; defined the run time environment; add a gene expression quantification; to check our samples, we add another process, FASTQC, and lastly we collected the outputs from the quantification and FASTQC processes to create a final report using MULTIQC.
+At each step, we asked pixi to run nextflow, adding and running one process at a time!
+
+![](day3_script.png)

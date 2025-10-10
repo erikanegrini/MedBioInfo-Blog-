@@ -1,0 +1,37 @@
+---
+title: "Day 4"
+author: "Erika Negrini"
+date: 2025-10-09
+format: html
+---
+
+On our fourth day of course, we got introduced to nf-core, a global community effort to collect Nextflow pipelines developed  around a variety of bioinformatic data. All nf-core pipelines are open source and the source code is available on github. However, nf-core does not only develop pipelines; the community also develops:
+
+-processes that they make available as modules (and optimizes them too).
+
+-training material for all user classes.
+
+-best practices for documentation.
+
+-templates for development.
+
+![](day4_1.png)
+
+From the nf-core homepage, we can search for specific pipelines. 
+During our practical session, we created a pixi environment containing nf-core and nextflow. Once that was done, we  turned our attention to nf-core to run up a pipeline with the build in test data to test the setup, and to familiarize  with the output of the pipeline.
+
+After testing that nextflow and nf-core are set up correctly, we used the pipeline on our RNAseq data. 
+
+![](thumbnails.png)
+
+While initializing, we made a new directory for this analysis. Then f-core helped us set up the pipelines with the nf-core launcher. Clicking on the launch version 3.19.0 button on the nf-core/rnaseq homepage, we followed the tutorial, we uploaded the input and output data, FASTA genome file and GTF annotation file. Once everything was filled in, clicking on Launch and we were redirected to another page containing our JSON file that has information on our run. We copied the JSON file and saved it as nf-params.json in our folder on HPC2N. 
+
+![](json.png)
+
+We then edited our configuration file with the correct project ID and personal email to receive a message with a summary of the run. The launcher gives the command to run the pipeline but we had to change this slightly, to add that we were running it via Pixi, and to add the server specific configuration file. 
+
+After the launch, if everything is fine, the run will go on until is over with all samples (around 5h)
+It is possible to check the progress of our job with squeue -u your_username
+
+
+

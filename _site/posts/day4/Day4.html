@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
-<meta name="dcterms.date" content="2025-10-06">
+<meta name="author" content="Erika Negrini">
+<meta name="dcterms.date" content="2025-10-09">
 
-<title>Post With Code – Blog EN</title>
+<title>Day 4 – Erika´s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-5b8f9b2f3cffee265242a5d44fbb1e00.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Blog EN</span>
+    <span class="navbar-title">Erika´s Blog</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -96,15 +96,15 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/erikanegrini"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://ki.se/en/people/erika-negrini"> <i class="bi bi-KI website" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -119,11 +119,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post With Code</h1>
+      <h1 class="title">Day 4</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-                <div class="quarto-category">code</div>
-                <div class="quarto-category">analysis</div>
+                <div class="quarto-category">true</div>
               </div>
                   </div>
   </div>
@@ -134,14 +132,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Harlow Malloc </p>
+               <p>Erika Negrini </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 6, 2025</p>
+        <p class="date">October 9, 2025</p>
       </div>
     </div>
     
@@ -160,7 +158,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is a post with executable code.</p>
+<p>On our fourth day of course, we got introduced to nf-core, a global community effort to collect Nextflow pipelines developed around a variety of bioinformatic data. All nf-core pipelines are open source and the source code is available on github. However, nf-core does not only develop pipelines; the community also develops:</p>
+<p>-processes that they make available as modules (and optimizes them too).</p>
+<p>-training material for all user classes.</p>
+<p>-best practices for documentation.</p>
+<p>-templates for development.</p>
+<p><img src="day4_1.png" class="img-fluid"></p>
+<p>From the nf-core homepage, we can search for specific pipelines. During our practical session, we created a pixi environment containing nf-core and nextflow. Once that was done, we turned our attention to nf-core to run up a pipeline with the build in test data to test the setup, and to familiarize with the output of the pipeline.</p>
+<p>After testing that nextflow and nf-core are set up correctly, we used the pipeline on our RNAseq data.</p>
+<p><img src="thumbnails.png" class="img-fluid"></p>
+<p>While initializing, we made a new directory for this analysis. Then f-core helped us set up the pipelines with the nf-core launcher. Clicking on the launch version 3.19.0 button on the nf-core/rnaseq homepage, we followed the tutorial, we uploaded the input and output data, FASTA genome file and GTF annotation file. Once everything was filled in, clicking on Launch and we were redirected to another page containing our JSON file that has information on our run. We copied the JSON file and saved it as nf-params.json in our folder on HPC2N.</p>
+<p><img src="json.png" class="img-fluid"></p>
+<p>We then edited our configuration file with the correct project ID and personal email to receive a message with a summary of the run. The launcher gives the command to run the pipeline but we had to change this slightly, to add that we were running it via Pixi, and to add the server specific configuration file.</p>
+<p>After the launch, if everything is fine, the run will go on until is over with all samples (around 5h) It is possible to check the progress of our job with squeue -u your_username</p>
 
 
 
@@ -238,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/your-website-url\.example\.com");
+        var filterRegex = new RegExp("https:\/\/erikanegrini\.github\.io\/MedBioInfo-Blog-\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

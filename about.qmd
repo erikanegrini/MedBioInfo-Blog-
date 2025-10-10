@@ -1,12 +1,12 @@
 ---
 title: "About me"
-image: profile.jpg
+image: headshot.png
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
+    - icon: Karolinska
+      text: Karolinska
+      href: https://ki.se/personer/erika-negrini
     - icon: linkedin
       text: LinkedIn
       href: www.linkedin.com/in/erika-negrini-a3a188283
@@ -16,4 +16,6 @@ about:
 
 ---
 
-You can find me here 
+I´m Erika Negrini, a first year PhD student at Karolinska Institutet
+
+You can read more about me here! 

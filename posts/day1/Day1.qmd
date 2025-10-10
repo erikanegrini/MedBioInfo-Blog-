@@ -1,0 +1,24 @@
+---
+title: "Day 1"
+author: "Erika Negrini"
+date: 2025-10-06
+format: html
+---
+
+On the first day of the course we had an introduction to Data Management & Reproducible Research. When working with any type of data, it makes sense to sit down before the project starts to think through the different life stages of the data in your project. 
+
+![](intro1.png)
+
+In the past, research data was often generated with one question in mind. Often, they would afterwards land in some drawer and be forgotten about. Nowadays researchers acknowledge that data can also be re-used, or combined with other data, to answer different questions. The FAIR principles promote efficient data discovery and reuse by providing guidelines to make digital resources. They rely on good data management practices in all phases of research: Research documentation, Data organisation, Information security, Ethics and legislation. In fact, the goal of the course is to give us tools that will help us plan and carry out your research. These tools will make our work more efficient and more reproducible. 
+
+![](thumbnail.png)
+
+After setting up GitHub and git in our server, we practiced the git merge function together to get more confident with this feature on VsCode and GitHub. 
+
+After a break, we created our first Quarto Blog on vsCode
+
+![](quarto.png)
+
+We created a Github repository and we pubblished it!
+
+![](day1.png)

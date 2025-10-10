@@ -1,0 +1,14 @@
+---
+title: "Day 2"
+author: "Erika Negrini"
+date: 2025-10-07
+format: html
+---
+
+Today we started our second day of course with an introduction to "Pixi", an environment manager. Bioinformatics environments specify the tools neded for the task at hand, and environment managers install these tools with all their dependencies. We installed Pixi, set up the environment in the course server, add and run Quarto.
+
+We then ran some quality control on sequencing data. When it comes to sequencing data, FastQC is a well known and often used software to check raw reads for their quality. Through a tutorial we got familiar with the command line, used the job scheduler slurm, made a Pixi environment, ran FastQC on some raw RNA sequencing files to practice and to understand the output and used MultiQC to summarize the FastQC output.
+
+After a break we got introduced to the "containers". Containers are stand-alone pieces of software that require a container management tool to run. They are build and exchanged as container images that specify the contents of the container, such as the operating system, all dependencies, and software in an isolated environment. The container management tool then takes the images and build the container. These management tools can be run on all operating systems, and since the container has the operating system within it, it will run the same in all environments. Container images are easily portable and immutable, so they are stable over time. There are several programs that can be used to build and run containers. Docker, Appptainer, and Podman are the most commonly used platforms to date. Dockerhub and Seqera are two commonly used platforms for downloading container images. Once you have the container image on your local machine, you want to be able to use it. Apptainer can be used to build the container from the image. Then you can either enter the container and run as if you had the exact same operating system as the person who built it, or you can run the software inside the container from outside of the container. You can run Apptainer containers as part of a batch job by integrating them into a SLURM job submission script. We then ended the class by building our own container from scartch (from a definition file with the extension .def), a quite computationally intensive task, but the result was quite rewarding!
+
+![](thumbnail.png)
